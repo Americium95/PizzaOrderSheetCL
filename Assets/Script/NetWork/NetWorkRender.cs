@@ -108,4 +108,9 @@ public class NetWorkHandler:  SimpleChannelInboundHandler<string>{
         Debug.Log("Exception: " + exception);
         context.CloseAsync();
     }
+
+    public void Send(byte packet)
+    {
+        NetWorkRender.bootstrapChannel.WriteAndFlushAsync(packet);
+    }
 }
