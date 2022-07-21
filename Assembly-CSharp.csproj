@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\NetWork\NetWorkRender.cs" />
+     <Compile Include="Assets\Script\NetWork\networkTransform.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -280,11 +281,26 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Handlers">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\DotNetty.Handlers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
@@ -292,11 +308,41 @@
     <Reference Include="Unity.Burst.Cecil">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Transport">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\DotNetty.Transport.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Common">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\DotNetty.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Codecs">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\DotNetty.Codecs.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Buffers">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\DotNetty.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>C:\Users\sunk0\Documents\GitHub\PizzaOrderSheet\Assets\Plugins\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
