@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -12,8 +13,16 @@ using DotNetty.Transport.Channels.Sockets;
 using UnityEngine;
 
 
+public class networkRenderer: MonoBehaviour
+{
+    public async void Start()
+    {
+        await NetWork.RunServerAsync();
+    }
 
-public static class NetWorkRender
+}
+
+public static class NetWork
 {
     public static Vector3 severSamplePos = new Vector3(0, 0, 0);
     public static int severSampleRotation = 0;
@@ -21,6 +30,8 @@ public static class NetWorkRender
     public static int serverSampleSpeed = 0;
 
     public static IChannel bootstrapChannel;
+
+
 
     public static async Task RunServerAsync()
     {
@@ -40,10 +51,23 @@ public static class NetWorkRender
             pipeline.AddLast("echo", new EchoClientHandler());
         }));
 
-        bootstrapChannel=await cliantBootstrap.ConnectAsync(new IPEndPoint(IPAddress.Parse("192.168.0.2"),29100));
-        
+        bootstrapChannel = await cliantBootstrap.ConnectAsync(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 29100));
 
     }
+
+    public static void send(List<byte> packet)
+    {
+        NetWork.bootstrapChannel.WriteAndFlushAsync(Encoding.UTF8.GetString(packet.ToArray()));
+    }
+
+    //평문 전송
+    public static void sendNetworkSrtingData(string str)
+    {
+        List<byte> packet = new List<byte> { 0x01, 0x01 };
+        packet.AddRange(Encoding.UTF8.GetBytes(str));
+        NetWork.bootstrapChannel.WriteAndFlushAsync(packet);
+    }
+
 }
 
 public class NetWorkHandler:  SimpleChannelInboundHandler<string>{
@@ -91,9 +115,9 @@ public class NetWorkHandler:  SimpleChannelInboundHandler<string>{
                 for(int i=0;i<userListData.Length-1;i++)
                 {
 
-                    NetWorkRender.severSamplePos=new Vector3(-float.Parse(userListData[1].Split(',')[0]),float.Parse(userListData[1].Split(',')[1])/10,-float.Parse(userListData[1].Split(',')[2]));
-                    NetWorkRender.serverSampleSpeed=int.Parse(userListData[1].Split(',')[3]);
-                    NetWorkRender.severSampleRotation=(int)(int.Parse(userListData[1].Split(',')[4])*1.4f);
+                    NetWork.severSamplePos=new Vector3(-float.Parse(userListData[1].Split(',')[0]),float.Parse(userListData[1].Split(',')[1])/10,-float.Parse(userListData[1].Split(',')[2]));
+                    NetWork.serverSampleSpeed=int.Parse(userListData[1].Split(',')[3]);
+                    NetWork.severSampleRotation=(int)(int.Parse(userListData[1].Split(',')[4])*1.4f);
                 }
 
             }
@@ -109,8 +133,4 @@ public class NetWorkHandler:  SimpleChannelInboundHandler<string>{
         context.CloseAsync();
     }
 
-    public void Send(byte packet)
-    {
-        NetWorkRender.bootstrapChannel.WriteAndFlushAsync(packet);
-    }
 }

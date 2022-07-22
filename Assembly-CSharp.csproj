@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\NetWork\networkTransform.cs" />
-    <Compile Include="Assets\Script\NetWork\NetWorkRender.cs" />
+    <Compile Include="Assets\Script\NetWork\networkRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
